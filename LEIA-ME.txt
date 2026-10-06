@@ -1,0 +1,9 @@
+PITICO PET CARE
+
+Para abrir: extraia a pasta e abra index.html no navegador.
+
+Arquivos: index.html, styles.css, script.js e pasta assets.
+
+WhatsApp: em script.js, preencha WHATSAPP_NUMBER com 55 + DDD + número, apenas dígitos. Enquanto estiver vazio, os botões oferecem contato pelo Instagram.
+
+As fontes do Google são carregadas com conexão à internet. Sem conexão, serão usadas as fontes alternativas.
