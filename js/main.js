@@ -67,17 +67,19 @@
     // Pequeno atraso em cascata para itens lado a lado
     document.querySelectorAll('.cards, .plans, .hero__text, .about__text').forEach(function (group) {
       group.querySelectorAll(':scope > .reveal').forEach(function (el, i) {
-        el.style.setProperty('--d', Math.min(i * 0.08, 0.5) + 's');
+        el.style.setProperty('--d', Math.min(i * 0.12, 0.6) + 's');
       });
     });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-in');
-          io.unobserve(entry.target);
+          var el = entry.target;
+          el.classList.add('is-in');
+          io.unobserve(el);
+          setTimeout(function () { el.classList.add('is-done'); }, 1800);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
     items.forEach(function (el) { io.observe(el); });
   }
 
